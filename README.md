@@ -1,47 +1,11 @@
 # Ruby Practice
-## String
-### String multiplication
-Output
-```
-"HoHoHo"
-```
-using String multiplication.
+## Integer
+### short sides, => hypotenuse
 
-### upcase, downcase, swapcase
-Output
-```
-"HELLO friends AnD FaMiLy"
-```
-using a combination of the upcase, downcase, and swapcase methods.
+### basic math
+If you divide the number of days in a regular year by the number of days in a week, what's the remainder?
 
-### chomp
-Output:
+Your output should be a number; for example,
 ```
-"Hello!"
-```
-using the given starting variable.
-
-### gsub
-Output:
-```
-"put spaces in between these words"
-```
-using the given starting variable.
-
-### strip
-Output exactly
-```
-"no external whitespace"
-```
-using the given starting variable.
-
-### gets
-  ### Hello, gets.chomp
-Write a program that gets a name (e.g. "alice") from the user, capitalizes it, and then says "Hello, Alice!"
-
-Should work similarly to the following:
-```
-"What's your name?"
-jelani
-"Hello, Jelani!"
+4
 ```
