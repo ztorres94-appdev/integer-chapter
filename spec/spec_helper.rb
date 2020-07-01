@@ -14,8 +14,6 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-# Require all advanced classes
-Dir[File.join(__dir__, '..', 'advanced', '*.rb')].each { |file| require file }
 
 require "#{File.expand_path('../support/json_output_formatter', __FILE__)}"
 require "#{File.expand_path('../support/hint_formatter', __FILE__)}"
