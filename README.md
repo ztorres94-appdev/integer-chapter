@@ -36,3 +36,20 @@ Example (`12` is the input):
 12
 false
 ```
+
+## integer_birth_year.rb
+
+Ask for a person’s age, and then calculate and display what year they were born in.
+
+Input:
+`80`
+
+Key output:
+"Wow, you were born in 1940. You're old!"
+
+Complete input and output example:
+```bash
+"How old are you?"
+80
+"Wow, you were born in 1940. You're old!"
+```

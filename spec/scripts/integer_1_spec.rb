@@ -16,7 +16,7 @@ end
 
 describe "integer_odd.rb" do
   it "should output 'true' if the entered number is odd", points: 1 do
-    p $".select{|r| r.include? 'integer_odd.rb'}
+
     allow_any_instance_of(Object).to receive(:gets).and_return("13")
 
     expect { require_relative '../../integer_odd' }.to output(/true/i).to_stdout
