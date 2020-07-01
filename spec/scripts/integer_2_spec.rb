@@ -21,7 +21,7 @@ end
 
 describe "integer_birth_year.rb" do
   it "should output'Wow, you were born in 1940. You're old!' if the input is 80.", points: 1 do
-    # Un-require integer_odd.rb
+    # Un-require integer_birth_year.rb
     integer_birth_year = $".select{|r| r.include? 'integer_birth_year.rb'}
     $".delete(integer_birth_year.first)
 
