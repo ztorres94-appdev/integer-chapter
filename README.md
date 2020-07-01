@@ -12,7 +12,7 @@ To re-run this command, you can use the UP and DOWN arrow keys to look at the hi
 
 ## Integer
 
-### integer_math
+### integer_math.rb
 If you divide the number of days in a regular year by the number of days in a week, what's the remainder?
 
 Your output should be a number; for example,
@@ -20,7 +20,7 @@ Your output should be a number; for example,
 4
 ```
 
-### integer_odd
+### integer_odd.rb
 It should ask the user to enter a number (using `gets`) and output `true` or `false` if the entered number is odd.
 
 Example (`13` is the input):
