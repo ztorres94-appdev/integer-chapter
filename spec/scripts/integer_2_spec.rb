@@ -8,7 +8,12 @@ describe "integer_odd.rb" do
     
     allow_any_instance_of(Object).to receive(:gets).and_return("12")
 
-    expect { require_relative '../../integer_odd' }.to output(/false/i).to_stdout
+    output = with_captured_stdout { require_relative('../../integer_odd')} 
+    output = "empty" if output.empty? 
+    expect(output.match?(/false/i)).to be(true),
+      "Expected output to be 'false', but was #{output}."
+
+    # expect { require_relative '../../integer_odd' }.to output(/false/i).to_stdout
   end
 end
 
@@ -17,7 +22,12 @@ describe "integer_birth_year.rb" do
 
     allow_any_instance_of(Object).to receive(:gets).and_return("80")
     year = Date.today.year - 80
-    expect { require_relative '../../integer_birth_year' }.to output(/Wow, you were born in #{year}. You're old!/i).to_stdout
+
+    output = with_captured_stdout { require_relative('../../integer_birth_year')} 
+    output = "empty" if output.empty? 
+    expect(output.match?(/Wow, you were born in #{year}. You're old!/i)).to be(true),
+      "Expected output to be 'Wow, you were born in #{year}. You're old!', but was #{output}."
+
   end
 end
 
@@ -29,6 +39,20 @@ describe "integer_birth_year.rb" do
 
     allow_any_instance_of(Object).to receive(:gets).and_return("20")
     year = Date.today.year - 20
-    expect { require_relative '../../integer_birth_year' }.to output(/Wow, you were born in #{year}. You're old!/i).to_stdout
+
+    output = with_captured_stdout { require_relative('../../integer_birth_year')} 
+    output = "empty" if output.empty? 
+    expect(output.match?(/Wow, you were born in #{year}. You're old!/i)).to be(true),
+      "Expected output to be 'Wow, you were born in #{year}. You're old!', but was #{output}."
+
   end
+end
+
+def with_captured_stdout
+  original_stdout = $stdout  # capture previous value of $stdout
+  $stdout = StringIO.new     # assign a string buffer to $stdout
+  yield                      # perform the body of the user code
+  $stdout.string             # return the contents of the string buffer
+ensure
+  $stdout = original_stdout  # restore $stdout to its previous value
 end
