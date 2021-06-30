@@ -12,8 +12,7 @@ describe "integer_math.rb" do
     output = with_captured_stdout { require_relative('../../integer_math')} 
     output = "empty" if output.empty? 
     expect(output.match?(/1\n/i)).to be(true),
-      "Expected integer_math.rb output to be '1\n', but was #{output}."
-    # expect { require_relative '../../integer_math' }.to output("1\n").to_stdout
+      "Expected integer_math.rb output to be '1\\n', but was #{output}."
 
   end
 end
@@ -26,9 +25,8 @@ describe "integer_odd.rb" do
     # expect { require_relative '../../integer_odd' }.to output(/true/i).to_stdout
     output = with_captured_stdout { require_relative('../../integer_odd')} 
     output = "empty" if output.empty? 
-    expect(output.match?(/1\n/i)).to be(true),
-      "Expected integer_odd.rb output to be 'Enter an odd number:\ntrue\n', but was #{output}."
-    # expect { require_relative '../../integer_odd' }.to output("1\n").to_stdout
+    expect(output.match?(/true\n/i)).to be(true),
+      "Expected integer_odd.rb output to be 'Enter an odd number:\\ntrue\n', but was #{output}."
 
   end
 end

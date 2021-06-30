@@ -11,7 +11,7 @@ describe "integer_odd.rb" do
     output = with_captured_stdout { require_relative('../../integer_odd')} 
     output = "empty" if output.empty? 
     expect(output.match?(/false/i)).to be(true),
-      "Expected output to be 'Enter an odd number:\nfalse', but was #{output}."
+      "Expected output to be 'Enter an odd number:\\nfalse', but was #{output}."
 
     # expect { require_relative '../../integer_odd' }.to output(/false/i).to_stdout
   end
@@ -26,7 +26,7 @@ describe "integer_birth_year.rb" do
     output = with_captured_stdout { require_relative('../../integer_birth_year')} 
     output = "empty" if output.empty? 
     expect(output.match?(/Wow, you were born in #{year}. You're old!/i)).to be(true),
-      "Expected output to be 'How old are you?\nWow, you were born in #{year}. You're old!', but was #{output}."
+      "Expected output to be 'How old are you?\\nWow, you were born in #{year}. You're old!', but was #{output}."
 
   end
 end
@@ -43,7 +43,7 @@ describe "integer_birth_year.rb" do
     output = with_captured_stdout { require_relative('../../integer_birth_year')} 
     output = "empty" if output.empty? 
     expect(output.match?(/Wow, you were born in #{year}. You're old!/i)).to be(true),
-      "Expected output to be 'How old are you?\nWow, you were born in #{year}. You're old!', but was #{output}."
+      "Expected output to be 'How old are you?\\nWow, you were born in #{year}. You're old!', but was #{output}."
 
   end
 end
