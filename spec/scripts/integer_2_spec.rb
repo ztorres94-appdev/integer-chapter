@@ -13,7 +13,6 @@ describe "integer_odd.rb" do
     expect(output.match?(/false/i)).to be(true),
       "Expected output to be 'Enter an odd number:\\nfalse', but was #{output}."
 
-    # expect { require_relative '../../integer_odd' }.to output(/false/i).to_stdout
   end
 end
 

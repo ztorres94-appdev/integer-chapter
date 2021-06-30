@@ -22,7 +22,6 @@ describe "integer_odd.rb" do
 
     allow_any_instance_of(Object).to receive(:gets).and_return("13")
 
-    # expect { require_relative '../../integer_odd' }.to output(/true/i).to_stdout
     output = with_captured_stdout { require_relative('../../integer_odd')} 
     output = "empty" if output.empty? 
     expect(output.match?(/true\n/i)).to be(true),
